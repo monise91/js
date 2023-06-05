@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+<form id="form1" action="">
+Nome: <input type="text" name="name" value="Nome"><br>
+Sobrenome: <input type="text" name="sname" value="Sobrenome"><br><br>
+</form> 
+<button onclick="takeValue()">mostra valor</button>
+
+<p id="teste"></p>
+
+<script>
+function takeValue() {
+var x = document.getElementById("form1");
+var texto = "";
+var i;
+for (i = 0; i < x.length ;i++) {
+    texto += x.elements[i].value + "<br>";
+}
+
+document.getElementById("teste").innerHTML = texto;
+if(texto == "Nome<br>Sobrenome<br>"){
+alert("quero exibir alerta de SUCESSO feito com html e css");
+}
+else{
+    alert("quero exibir alerta de ERRO feito com html e csss");
+    }
+}
+</script>
+    
+</body>
+</html>
